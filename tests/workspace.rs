@@ -13,8 +13,8 @@ fn fixtures_dir() -> PathBuf {
 #[test]
 fn test_workspace_patching_passes() -> TestResult<()> {
     let fixture_path = fixtures_dir();
-    dbg!(&fixture_path);
-    let mut edit_runner = Command::new(env!("CARGO_BIN_EXE_CARGO-RHACK"));
+
+    let mut edit_runner = Command::new(env!("CARGO_BIN_EXE_cargo-rhack"));
     _ = edit_runner
         .stdin(Stdio::null())
         .stdout(Stdio::inherit())
@@ -29,7 +29,7 @@ fn test_workspace_patching_passes() -> TestResult<()> {
     // format of the table
     // for now it panics if patch section can't be created
 
-    let mut undo_runner = Command::new(env!("CARGO_BIN_EXE_CARGO-RHACK"));
+    let mut undo_runner = Command::new(env!("CARGO_BIN_EXE_cargo-rhack"));
     _ = undo_runner
         .stdin(Stdio::null())
         .stdout(Stdio::inherit())
