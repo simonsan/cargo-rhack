@@ -9,7 +9,7 @@ keywords = ["cli", "cargo", "dependency", "crate"]
 license-file = "LICENSE"
 readme = "README.md"
 repository = "https://github.com/simonsan/rhack"
-rust-version = "1.65.0"
+rust-version = "1.74.1"
 description = "Temporary edits to your Rust dependencies"
 
 [package.metadata.wix]
