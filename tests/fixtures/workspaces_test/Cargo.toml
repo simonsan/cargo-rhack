@@ -9,4 +9,4 @@ edition = "2021"
 toml_edit = "0.19.9"
 
 [dependencies]
-toml_edit.workspace = true
+toml_edit = { workspace = true }
