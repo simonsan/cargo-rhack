@@ -97,7 +97,7 @@ codegen-units = 1
 
 # Allows quick RPM file generation, if "cargo-generate-rpm" is installed:
 #  cargo build --release; cargo generate-rpm
-# will result in a file like target/generate-rpm/pace-rs-0.6.1-1.x86_64.rpm
+# will result in a file like target/generate-rpm/cargo-rhack-0.6.1-1.x86_64.rpm
 [package.metadata.generate-rpm]
 assets = [
   { source = "target/release/pace", dest = "/usr/bin/cargo-rhack", mode = "0755", config = false, doc = false }, # user = "root", group = "root" },
