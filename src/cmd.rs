@@ -9,7 +9,7 @@ use std::{env, str::FromStr};
 use anyhow::{anyhow, Result};
 use clap::{Parser, Subcommand};
 use serde_json::Value;
-use toml_edit::Document;
+use toml_edit::DocumentMut;
 
 pub use edit::Edit;
 pub use undo::Undo;
@@ -92,7 +92,7 @@ pub fn manifest_path() -> Result<PathBuf> {
 }
 
 // Gives back the parsed Cargo.toml placed at the working directory.
-pub fn load_manifest(manifest_path: &PathBuf) -> Result<Document> {
+pub fn load_manifest(manifest_path: &PathBuf) -> Result<DocumentMut> {
     let manifest = match fs::read_to_string(manifest_path) {
         Ok(b) => b,
         Err(err) => {
@@ -103,7 +103,7 @@ pub fn load_manifest(manifest_path: &PathBuf) -> Result<Document> {
             ))
         }
     };
-    match manifest.parse::<Document>() {
+    match manifest.parse::<DocumentMut>() {
         Ok(m) => Ok(m),
         Err(err) => Err(anyhow!(
             "failed to parse {}: {:#}",
