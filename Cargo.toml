@@ -4,11 +4,11 @@ version = "0.1.3"
 authors = ["nakabonne <ryo@nakao.dev>"]
 categories = ["command-line-utilities"]
 edition = "2021"
-homepage = "https://github.com/simonsan/rhack"
+homepage = "https://github.com/simonsan/cargo-rhack"
 keywords = ["cli", "cargo", "dependency", "crate"]
 license-file = "LICENSE"
 readme = "README.md"
-repository = "https://github.com/simonsan/rhack"
+repository = "https://github.com/simonsan/cargo-rhack"
 rust-version = "1.74.1"
 description = "Temporary edits to your Rust dependencies"
 
