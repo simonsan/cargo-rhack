@@ -80,6 +80,12 @@ Currently there are no
 cargo install cargo-rhack
 ```
 
+#### Binstall
+
+```sh
+cargo binstall cargo-rhack
+```
+
 <!--
 ### From source
 
