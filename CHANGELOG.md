@@ -5,6 +5,24 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.1.3](https://github.com/simonsan/cargo-rhack/compare/v0.1.2...v0.1.3) - 2024-03-17
+
+### Fixed
+- deny config
+- config
+- clippy lints
+
+### Other
+- fix missing version in msrv test
+- update fixtures
+- fix workspace patching test
+- fix env var
+- add cargo deny config
+- update msrv
+- update dependencies
+- update manifest
+- maintenance
+
 ## 0.1.2 (2023-05-21)
 
 <csr-id-bc2239651306548bc3432e42691e655f54ef6d28/>
