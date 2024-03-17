@@ -10,7 +10,7 @@ license-file = "LICENSE"
 readme = "README.md"
 repository = "https://github.com/simonsan/cargo-rhack"
 rust-version = "1.74.1"
-description = "Temporary edits to your Rust dependencies"
+description = " Temporarily edit your Cargo dependencies"
 
 [package.metadata.wix]
 upgrade-guid = "761BAF94-3270-4E25-A807-B9C44138635A"
