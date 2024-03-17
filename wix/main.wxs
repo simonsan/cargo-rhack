@@ -62,15 +62,15 @@
         Id='*'
         Name='cargo-rhack'
         UpgradeCode='761BAF94-3270-4E25-A807-B9C44138635A'
-        Manufacturer='nakabonne'
+        Manufacturer='the cargo-rhack team'
         Language='1033'
         Codepage='1252'
         Version='$(var.Version)'>
 
         <Package Id='*'
             Keywords='Installer'
-            Description='Temporary edits to your Rust dependencies'
-            Manufacturer='nakabonne'
+            Description='Temporarily edit your Cargo dependencies'
+            Manufacturer='the cargo-rhack team'
             InstallerVersion='450'
             Languages='1033'
             Compressed='yes'
