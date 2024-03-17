@@ -100,7 +100,7 @@ codegen-units = 1
 # will result in a file like target/generate-rpm/cargo-rhack-0.6.1-1.x86_64.rpm
 [package.metadata.generate-rpm]
 assets = [
-  { source = "target/release/pace", dest = "/usr/bin/cargo-rhack", mode = "0755", config = false, doc = false }, # user = "root", group = "root" },
+  { source = "target/release/cargo-rhack", dest = "/usr/bin/cargo-rhack", mode = "0755", config = false, doc = false }, # user = "root", group = "root" },
 ]
 
 [lints.rust]
@@ -153,8 +153,8 @@ module_name_repetitions = "allow"
 # cargo-binstall support
 # https://github.com/cargo-bins/cargo-binstall/blob/HEAD/SUPPORT.md
 [package.metadata.binstall]
-pkg-url = "{ repo }/releases/download/{ bin }-v{ version }/{ bin }-v{ version }-{ target }{ archive-suffix }"
-bin-dir = "{ bin }-{ target }/{ bin }{ binary-ext }"
+pkg-url = "{ repo }/releases/download/v{ version }/{ bin }-{ target }{ archive-suffix }"
+bin-dir = "{ bin }{ binary-ext }"
 pkg-fmt = "txz"
 
 [package.metadata.binstall.overrides.x86_64-pc-windows-msvc]
