@@ -19,10 +19,12 @@ fn test_workspace_patching_passes() -> TestResult<()> {
         .stdin(Stdio::null())
         .stdout(Stdio::inherit())
         .stderr(Stdio::inherit());
+
     let edit_child = edit_runner
-        .args(["edit", "toml_edit"])
+        .args(["rhack", "edit", "toml_edit"])
         .current_dir(fixture_path.canonicalize()?)
         .spawn()?;
+
     let _edit_output = edit_child.wait_with_output()?;
 
     // TODO: Test other conditions, e.g. if the directory has been created etc.
@@ -34,8 +36,9 @@ fn test_workspace_patching_passes() -> TestResult<()> {
         .stdin(Stdio::null())
         .stdout(Stdio::inherit())
         .stderr(Stdio::inherit());
+
     let _undo_child = undo_runner
-        .args(["undo"])
+        .args(["rhack", "undo"])
         .current_dir(fixture_path.canonicalize()?)
         .spawn()?;
 
