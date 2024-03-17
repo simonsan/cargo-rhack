@@ -152,8 +152,8 @@ test-powerset *PACKAGE:
 
 # Update the scoop manifest from the given version to the latest on crates.io
 update-scoop-manifest:
-	sd $env:PACE_CURRENT_VERSION $(xh get https://crates.io/api/v1/crates/cargo-rhack | jq .crate.max_version) scoop/pace.json
-	sd $env:PACE_CURRENT_VERSION $(xh get https://crates.io/api/v1/crates/cargo-rhack | jq .crate.max_version) .env
+	sd $env:RHACK_CURRENT_VERSION $(xh get https://crates.io/api/v1/crates/cargo-rhack | jq .crate.max_version) scoop/cargo-rhack.json
+	sd $env:RHACK_CURRENT_VERSION $(xh get https://crates.io/api/v1/crates/cargo-rhack | jq .crate.max_version) .env
 
 # Run insta tests in review mode
 insta:
