@@ -5,6 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.1.5](https://github.com/simonsan/cargo-rhack/compare/v0.1.4...v0.1.5) - 2024-03-17
+
+### Other
+- update manifest
+- fix description
+- update authors in manifest
+- update license with original BSD 3-Clause template
+- update description
+- update scoop manifest
+
 ## [0.1.4](https://github.com/simonsan/cargo-rhack/compare/v0.1.3...v0.1.4) - 2024-03-17
 
 ### Other
