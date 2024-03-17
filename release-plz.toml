@@ -1,0 +1,16 @@
+[workspace]
+pr_draft = true
+dependencies_update = true
+
+[[package]]
+name = "cargo-rhack"
+changelog_update = true
+# release-plz doesn't work well with cargo-dist, so we deactivate releases here
+# and let cargo-dist handle the release
+git_release_enable = false
+git_tag_enable = true
+# but we want to publish the crate to crates.io
+publish = true
+
+[changelog]
+protect_breaking_commits = true
