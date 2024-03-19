@@ -1,12 +1,12 @@
 {
-    "version": "0.1.4",
+    "version": "0.1.5",
     "description": "Temporarily edit external crates that your project depends on",
     "homepage": "https://github.com/simonsan/cargo-rhack",
     "license": "BSD-3",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/simonsan/cargo-rhack/releases/download/v0.1.4/cargo-rhack-x86_64-pc-windows-msvc.zip",
-            "hash": "e5ef9e4698f45a6a48eada369da214563232ee87db309000fb761d49b3f887a4"
+            "url": "https://github.com/simonsan/cargo-rhack/releases/download/v0.1.5/cargo-rhack-x86_64-pc-windows-msvc.zip",
+            "hash": "713cef90c61b1858b8e9a3ba71e583a5253fee069db9279617279717d595c4c1"
         }
     },
     "bin": "cargo-rhack.exe",
