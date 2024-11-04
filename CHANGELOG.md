@@ -5,6 +5,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.1.6](https://github.com/simonsan/cargo-rhack/compare/v0.1.5...v0.1.6) - 2024-11-04
+
+### Other
+
+- *(config)* migrate renovate config ([#11](https://github.com/simonsan/cargo-rhack/pull/11))
+- Update renovate.json
+- update scoop manifest
+- check clippy for beta and nightly but don't block prs on it
+
 ## [0.1.5](https://github.com/simonsan/cargo-rhack/compare/v0.1.4...v0.1.5) - 2024-03-17
 
 ### Other
