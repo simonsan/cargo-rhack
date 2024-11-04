@@ -1,53 +1,57 @@
 {
-    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-    "extends": [
-        "config:recommended",
-        ":dependencyDashboard"
-    ],
-    "separateMinorPatch": false,
-    "prHourlyLimit": 1,
-    "prConcurrentLimit": 1,
-    "rebaseConflictedPrs": false,
-    "rebaseStalePrs": false,
-    "major": {
-        "dependencyDashboardApproval": true
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "packageRules": [
+    {
+      "description": "Automerge updates for GitHub Actions",
+      "groupName": "actions",
+      "groupSlug": "all-actions",
+      "matchManagers": [
+        "github-actions"
+      ],
+      "labels": [
+          "A-ci"
+      ],
+      "extends": [
+        "schedule:weekly"
+      ],
+      "automerge": true
     },
-    "labels": [
-        "A-dependencies"
-    ],
-    "packageRules": [
-        {
-            "description": "Automerge pin updates for GitHub Actions",
-            "matchDatasources": [
-                "github-actions"
-            ],
-            "matchDepTypes": [
-                "action"
-            ],
-            "matchUpdateTypes": [
-                "pin",
-                "digest",
-                "pinDigest"
-            ],
-            "labels": [
-                "A-ci"
-            ],
-            "automerge": true
-        },
-        {
-            "matchDatasources": [
-                "cargo"
-            ],
-            "extends": [
-                "schedule:weekly"
-            ]
-        }
-    ],
-    "lockFileMaintenance": {
-        "enabled": true,
-        "automerge": true,
-        "extends": [
-            "schedule:monthly"
-        ]
+    {
+      "groupName": "rust dependencies",
+      "groupSlug": "cargo",
+      "matchManagers": [
+        "cargo"
+      ],
+      "extends": [
+        "schedule:weekly"
+      ]
     }
+  ],
+  "extends": [
+      "config:recommended",
+      ":dependencyDashboard",
+      "helpers:pinGitHubActionDigests"
+  ],
+  "separateMinorPatch": false,
+  "separateMajorMinor": false,
+  "prHourlyLimit": 1,
+  "prConcurrentLimit": 1,
+  "rebaseConflictedPrs": false,
+  "rebaseStalePrs": false,
+  "major": {
+      "dependencyDashboardApproval": true
+  },
+  "labels": [
+      "A-dependencies"
+  ],
+  "patch": {
+    "enabled": false
+  },
+  "lockFileMaintenance": {
+      "enabled": true,
+      "automerge": true,
+      "extends": [
+          "schedule:weekly"
+      ]
+  }
 }
