@@ -9,7 +9,7 @@
         "github-actions"
       ],
       "labels": [
-          "A-ci"
+        "A-ci"
       ],
       "extends": [
         "schedule:weekly"
@@ -28,30 +28,29 @@
     }
   ],
   "extends": [
-      "config:recommended",
-      ":dependencyDashboard",
-      "helpers:pinGitHubActionDigests"
+    "config:recommended",
+    ":dependencyDashboard",
+    "helpers:pinGitHubActionDigests"
   ],
   "separateMinorPatch": false,
   "separateMajorMinor": false,
   "prHourlyLimit": 1,
   "prConcurrentLimit": 1,
-  "rebaseConflictedPrs": false,
-  "rebaseStalePrs": false,
+  "rebaseWhen": "never",
   "major": {
-      "dependencyDashboardApproval": true
+    "dependencyDashboardApproval": true
   },
   "labels": [
-      "A-dependencies"
+    "A-dependencies"
   ],
   "patch": {
     "enabled": false
   },
   "lockFileMaintenance": {
-      "enabled": true,
-      "automerge": true,
-      "extends": [
-          "schedule:weekly"
-      ]
+    "enabled": true,
+    "automerge": true,
+    "extends": [
+      "schedule:weekly"
+    ]
   }
 }
